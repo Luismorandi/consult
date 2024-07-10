@@ -1,19 +1,39 @@
-import { PostRepository } from "../../../domain/post.repository";
-import { PostValue } from "../../../domain/post.value";
-import { PostEntityDT0 } from "../../../domain/posts.entity";
-import { CreateProfileDTO } from "../../../domain/profile.dto";
-import { ProfileRepository } from "../../../domain/profile.repository";
-import { Profile } from "../../../domain/profile.value";
-import PostModel from "./model/post.schema";
+import { injectable } from "inversify";
+import { ProfileEntity } from "../../../domain/profile.entity";
+import { IProfileRepository } from "../../../domain/profile.repository";
+import { ProfileValue } from "../../../domain/profile.value";
+import ProfileModel, { ProfileDocument } from "./model/profile.schema";
 
-export class MongoRepository implements ProfileRepository {
-  async create(profile: Profile): Promise<Profile> {
-    const post = await ProfileModel.create(profile);
-    return profile;
+@injectable()
+export class MongoRepository implements IProfileRepository {
+  async create(profile: ProfileValue): Promise<ProfileEntity> {
+    try {
+      const createProfile = await ProfileModel.create(profile);
+      return this.toDomain(createProfile);
+    } catch (err) {
+      throw new Error(`Not posible create profile`);
+    }
   }
 
-  async getById(id: string): Promise<Profile> {
-    const profile = await ProfileModel.findById(id);
-    return profile;
+  async getById(id: string): Promise<ProfileEntity | null> {
+    try {
+      const profile = await ProfileModel.findById(id);
+      if (!profile) return null;
+      return this.toDomain(profile);
+    } catch (err) {
+      throw new Error(`Not found profile`);
+    }
+  }
+
+  private toDomain(profileMongo: ProfileDocument): ProfileEntity {
+    return new ProfileValue({
+      id: profileMongo._id.toString(),
+      name: profileMongo.name,
+      born_experience: profileMongo.born_experience,
+      last_name: profileMongo.last_name,
+      specialist: profileMongo.specialist,
+      picture_url: profileMongo.picture_url,
+      type: profileMongo.type,
+    });
   }
 }

@@ -1,7 +1,10 @@
-export interface IProfile {
+export interface ProfileEntity {
   name: string;
   last_name: string;
   picture_url: string;
   specialist: string;
-  born_exprience: number;
+  born_experience: Date;
+  id: string;
+  update_at: Date;
+  type: string;
 }

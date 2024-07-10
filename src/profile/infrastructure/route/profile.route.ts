@@ -1,9 +1,12 @@
 import { Router } from "express";
+import { BuildDependencies } from "../../../dependencies/init";
 
-const postRoute = Router();
-const postController = setupPost();
+const profileRoute = Router();
+const controllers = new BuildDependencies().init();
 
-postRoute.post("/post", postController.createPost);
-postRoute.get("/post", postController.getPosts);
+profileRoute.post(
+  "/profile",
+  controllers.createProfileController.createProfile
+);
 
-export default postRoute;
+export default profileRoute;

@@ -1,8 +1,8 @@
 import { CreateProfileDTO } from "./profile.dto";
-import { IProfile } from "./profile.entity";
-import { Profile } from "./profile.value";
+import { ProfileEntity } from "./profile.entity";
+import { ProfileValue } from "./profile.value";
 
-export interface ProfileRepository {
-  create(profile: Profile): Promise<Profile>;
-  getById(id: string): Promise<Profile>;
+export interface IProfileRepository {
+  create(profile: ProfileValue): Promise<ProfileEntity>;
+  getById(id: string): Promise<ProfileEntity | null>;
 }

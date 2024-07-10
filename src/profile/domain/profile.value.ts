@@ -1,23 +1,24 @@
 import { v4 as uuid } from "uuid";
 import { CreateProfileDTO } from "./profile.dto";
+import { ProfileEntity } from "./profile.entity";
 
-export class Profile {
-  uuid: string;
+export class ProfileValue implements ProfileEntity {
+  id: string;
   name: string;
   last_name: string;
   picture_url: string;
   specialist: string;
-  born_exprience: Date;
+  born_experience: Date;
   update_at: Date;
   type: string;
 
   constructor(input: CreateProfileDTO) {
-    (this.uuid = uuid()),
+    (this.id = input.id),
       (this.name = input.name),
       (this.last_name = input.last_name),
       (this.picture_url = input.picture_url),
       (this.specialist = input.specialist),
-      (this.born_exprience = input.born_expirience),
+      (this.born_experience = input.born_experience),
       (this.update_at = new Date()),
       (this.type = input.type);
   }
@@ -44,7 +45,7 @@ export class Profile {
   }
 
   public setBornExprience(bornExprience: Date) {
-    this.born_exprience = bornExprience;
+    this.born_experience = bornExprience;
     this.update();
   }
 }
