@@ -11,7 +11,7 @@ export class MongoRepository implements IProfileRepository {
       const createProfile = await ProfileModel.create(profile);
       return this.toDomain(createProfile);
     } catch (err) {
-      throw new Error(`Not posible create profile`);
+      throw new Error(`Not possible create profile`);
     }
   }
 
@@ -27,7 +27,7 @@ export class MongoRepository implements IProfileRepository {
 
   private toDomain(profileMongo: ProfileDocument): ProfileEntity {
     return new ProfileValue({
-      id: profileMongo._id.toString(),
+      id: profileMongo.id.toString(),
       name: profileMongo.name,
       born_experience: profileMongo.born_experience,
       last_name: profileMongo.last_name,

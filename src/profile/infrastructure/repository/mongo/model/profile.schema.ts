@@ -18,13 +18,14 @@ const ProfileSchema = new Schema(
   }
 );
 export interface ProfileDocument extends Document {
-  _id: Types.ObjectId;
+  id: Types.ObjectId;
   name: string;
   last_name: string;
   specialist: string;
   picture_url: string;
   born_experience: Date;
   type: string;
+  update_at: Date;
 }
 
 const ProfileModel = model<ProfileDocument>("profile", ProfileSchema);
