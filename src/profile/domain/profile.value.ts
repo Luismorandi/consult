@@ -11,6 +11,7 @@ export class ProfileValue implements ProfileEntity {
   born_experience: Date;
   update_at: Date;
   type: string;
+  user_id: string;
 
   constructor(input: CreateProfileDTO) {
     (this.id = input.id),
@@ -21,6 +22,7 @@ export class ProfileValue implements ProfileEntity {
       (this.born_experience = input.born_experience),
       (this.update_at = new Date()),
       (this.type = input.type);
+    this.user_id = input.user_id;
   }
 
   private update() {

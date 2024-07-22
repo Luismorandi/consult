@@ -1,4 +1,5 @@
 import { CreateProfileController } from "../profile/infrastructure/controller/createProfile.controller";
+import { CreateUserController } from "../user/infrastructure/controller/createUser.controller";
 import { container } from "./inversify.config";
 
 export class BuildDependencies {
@@ -7,6 +8,9 @@ export class BuildDependencies {
       CreateProfileController
     );
 
-    return { createProfileController };
+    const createUserController =
+      container.get<CreateUserController>(CreateUserController);
+
+    return { createProfileController, createUserController };
   }
 }

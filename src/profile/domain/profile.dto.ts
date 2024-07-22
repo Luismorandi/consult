@@ -33,4 +33,7 @@ export class CreateProfileDTO {
 
   @IsString()
   type: string;
+
+  @IsString()
+  user_id: string;
 }

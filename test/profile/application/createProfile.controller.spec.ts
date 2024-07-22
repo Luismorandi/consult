@@ -8,6 +8,7 @@ interface ExampleObject {
   picture_url?: string;
   type?: string;
   specialist: string;
+  user_id?: string;
 }
 const BODY: ExampleObject = {
   name: "luis",
@@ -16,6 +17,7 @@ const BODY: ExampleObject = {
   picture_url: "http://cloudfront.com/images/",
   type: "staff",
   specialist: "coach",
+  user_id: "useriD",
 };
 describe("POST '/' ", () => {
   test("should respond with a 400 without body", async () => {

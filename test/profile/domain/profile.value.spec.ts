@@ -11,6 +11,7 @@ const BODY: CreateProfileDTO = {
   picture_url: "http://cloudfront.com/images/",
   type: "staff",
   specialist: "coach",
+  user_id: "USERiD",
 };
 describe("ProfileValue", () => {
   test("should respond with a 400 without body", async () => {
@@ -24,6 +25,7 @@ describe("ProfileValue", () => {
     expect(profileValue.born_experience).toEqual(BODY.born_experience);
     expect(profileValue.update_at).toBeDefined(); // Check that update_at is defined
     expect(profileValue.type).toBe(BODY.type);
+    expect(profileValue.user_id).toBe(BODY.user_id);
   });
   it("should update name and update update_at timestamp", () => {
     const profileValue = new ProfileValue(BODY);

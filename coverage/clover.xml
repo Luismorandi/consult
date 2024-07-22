@@ -1,81 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1720756965003" clover="3.2.0">
-  <project timestamp="1720756965003" name="All files">
-    <metrics statements="108" coveredstatements="107" conditionals="2" coveredconditionals="2" methods="19" coveredmethods="19" elements="129" coveredelements="128" complexity="0" loc="108" ncloc="108" packages="11" files="12" classes="12"/>
+<coverage generated="1721618170771" clover="3.2.0">
+  <project timestamp="1721618170771" name="All files">
+    <metrics statements="180" coveredstatements="178" conditionals="4" coveredconditionals="4" methods="30" coveredmethods="30" elements="214" coveredelements="212" complexity="0" loc="180" ncloc="180" packages="18" files="19" classes="19"/>
     <package name="src">
-      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="app.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/app.ts">
-        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
+        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.config.constants">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="repository.constants.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/config/constants/repository.constants.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.config.db">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="mongo.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/config/db/mongo.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.dependencies">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="init.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/dependencies/init.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
       </file>
       <file name="inversify.config.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/dependencies/inversify.config.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.profile.application">
       <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="crateProfile.userCases.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/application/crateProfile.userCases.ts">
         <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
@@ -84,36 +93,37 @@
       </file>
     </package>
     <package name="src.profile.domain">
-      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
       <file name="profile.value.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/domain/profile.value.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="16" count="13" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.profile.infrastructure.controller">
       <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="createProfile.controller.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/infrastructure/controller/createProfile.controller.ts">
         <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="23" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -123,28 +133,29 @@
       </file>
     </package>
     <package name="src.profile.infrastructure.dto">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="createProfile.body.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/infrastructure/dto/createProfile.body.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.profile.infrastructure.repository.mongo">
       <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="mongo.repository.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/infrastructure/repository/mongo/mongo.repository.ts">
         <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="11" count="3" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
@@ -161,22 +172,125 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="profile.schema.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/infrastructure/repository/mongo/model/profile.schema.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.profile.infrastructure.route">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="profile.route.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/profile/infrastructure/route/profile.route.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.application">
+      <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="crateUser.userCases.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/application/crateUser.userCases.ts">
+        <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.domain">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="user.value.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/domain/user.value.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.infrastructure.controller">
+      <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="createUser.controller.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/infrastructure/controller/createUser.controller.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.infrastructure.dto">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="createUser.body.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/infrastructure/dto/createUser.body.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.infrastructure.repository.mongo">
+      <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="mongo.repository.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/infrastructure/repository/mongo/mongo.repository.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.infrastructure.repository.mongo.model">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="user.schema.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/infrastructure/repository/mongo/model/user.schema.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.user.infrastructure.route">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="user.route.ts" path="/Users/usuariocoder04/Desktop/projectsP/consult/src/user/infrastructure/route/user.route.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
       </file>
     </package>
   </project>

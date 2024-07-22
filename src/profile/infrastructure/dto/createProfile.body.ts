@@ -33,4 +33,6 @@ export class CreateProfileBody {
 
   @IsString()
   type: string;
+  @IsString()
+  user_id: string;
 }

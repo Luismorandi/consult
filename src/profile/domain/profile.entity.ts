@@ -7,4 +7,5 @@ export interface ProfileEntity {
   id: string;
   update_at: Date;
   type: string;
+  user_id: string;
 }

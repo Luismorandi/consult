@@ -13,6 +13,7 @@ const mockProfileDocument: Partial<ProfileDocument> = {
   born_experience: new Date("1990-01-01"),
   type: "staff",
   update_at: new Date("1990-01-01"),
+  user_id: "userId",
 };
 
 // Definir mockProfileModel antes de usar jest.mock
@@ -31,7 +32,7 @@ jest.mock(
 import ProfileModel, {
   ProfileDocument,
 } from "../../../../../src/profile/infrastructure/repository/mongo/model/profile.schema";
-import { MongoRepository } from "../../../../../src/profile/infrastructure/repository/mongo/mongo.repository";
+import { ProfileMongoRepository } from "../../../../../src/profile/infrastructure/repository/mongo/mongo.repository";
 import { ProfileEntity } from "../../../../../src/profile/domain/profile.entity";
 
 const toDomain = (profileMongo: ProfileDocument): ProfileEntity => {
@@ -44,11 +45,12 @@ const toDomain = (profileMongo: ProfileDocument): ProfileEntity => {
     specialist: profileMongo.specialist,
     picture_url: profileMongo.picture_url,
     type: profileMongo.type,
+    user_id: profileMongo.user_id,
   });
 };
 
 describe("MongoRepository", () => {
-  let mongoRepository: MongoRepository;
+  let mongoRepository: ProfileMongoRepository;
 
   const ProfileDto: CreateProfileDTO = {
     id: "1",
@@ -58,6 +60,7 @@ describe("MongoRepository", () => {
     specialist: "Developer",
     born_experience: new Date("1990-01-01"),
     type: "staff",
+    user_id: "userIOds",
   };
 
   const mockProfileValue: ProfileValue = new ProfileValue(ProfileDto);
@@ -74,7 +77,7 @@ describe("MongoRepository", () => {
   });
 
   beforeEach(() => {
-    mongoRepository = new MongoRepository();
+    mongoRepository = new ProfileMongoRepository();
     jest.clearAllMocks();
   });
 

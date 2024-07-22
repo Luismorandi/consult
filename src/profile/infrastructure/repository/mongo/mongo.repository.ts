@@ -5,7 +5,7 @@ import { ProfileValue } from "../../../domain/profile.value";
 import ProfileModel, { ProfileDocument } from "./model/profile.schema";
 
 @injectable()
-export class MongoRepository implements IProfileRepository {
+export class ProfileMongoRepository implements IProfileRepository {
   async create(profile: ProfileValue): Promise<ProfileEntity> {
     try {
       const createProfile = await ProfileModel.create(profile);
@@ -34,6 +34,7 @@ export class MongoRepository implements IProfileRepository {
       specialist: profileMongo.specialist,
       picture_url: profileMongo.picture_url,
       type: profileMongo.type,
+      user_id: profileMongo.user_id,
     });
   }
 }

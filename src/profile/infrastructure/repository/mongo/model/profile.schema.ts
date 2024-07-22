@@ -12,6 +12,7 @@ const ProfileSchema = new Schema(
     picture_url: { type: String },
     born_experience: { type: Date },
     type: { type: String },
+    user_id: { type: String },
   },
   {
     timestamps: true,
@@ -26,6 +27,7 @@ export interface ProfileDocument extends Document {
   born_experience: Date;
   type: string;
   update_at: Date;
+  user_id: string;
 }
 
 const ProfileModel = model<ProfileDocument>("profile", ProfileSchema);
