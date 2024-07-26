@@ -4,11 +4,12 @@ import profileRoute from "./profile/infrastructure/route/profile.route";
 import cors from "cors";
 import dbInit from "./config/db/mongo";
 import userRoute from "./user/infrastructure/route/user.route";
+import roleRoute from "./role/infrastructure/route/role.route";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(profileRoute, userRoute);
+app.use(profileRoute, userRoute, roleRoute);
 
 dbInit().then();
 

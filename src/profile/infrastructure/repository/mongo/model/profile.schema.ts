@@ -1,17 +1,16 @@
-import { ObjectId, Schema, model, Types } from "mongoose";
+import { Schema, model, Types } from "mongoose";
 
 const ProfileSchema = new Schema(
   {
-    name: {
+    first_name: {
       type: String,
     },
     last_name: {
       type: String,
     },
-    specialist: { type: String },
-    picture_url: { type: String },
-    born_experience: { type: Date },
-    type: { type: String },
+    description: { type: String },
+    avatar: { type: String },
+    role_id: { type: String },
     user_id: { type: String },
   },
   {
