@@ -24,4 +24,8 @@ export class UserValue implements UserEntity {
     this.password = password;
     this.update();
   }
+
+  public setUpdatedAt(updatedAt: Date) {
+    this.updated_at = updatedAt;
+  }
 }

@@ -5,12 +5,13 @@ import { CreateProfileDTO } from "../../../src/profile/domain/profile.dto";
 
 const BODY: CreateProfileDTO = {
   id: "9365945b-02d0-49d3-8d69-76c86764f64c",
-  name: "luis",
+  first_name: "luis",
   last_name: "morandi",
-  born_experience: new Date("2024-07-08T03:08:50.027Z"),
-  picture_url: "http://cloudfront.com/images/",
-  type: "staff",
-  specialist: "coach",
+  created_at: new Date("2024-07-08T03:08:50.027Z"),
+  updated_at: new Date("2024-07-08T03:08:50.027Z"),
+  avatar: "http://cloudfront.com/images/",
+  role_id: "staff",
+  description: "coach",
   user_id: "USERiD",
 };
 describe("ProfileValue", () => {
@@ -18,24 +19,24 @@ describe("ProfileValue", () => {
     const profileValue = new ProfileValue(BODY);
 
     expect(profileValue.id).toBe(BODY.id);
-    expect(profileValue.name).toBe(BODY.name);
+    expect(profileValue.first_name).toBe(BODY.first_name);
     expect(profileValue.last_name).toBe(BODY.last_name);
-    expect(profileValue.picture_url).toBe(BODY.picture_url);
-    expect(profileValue.specialist).toBe(BODY.specialist);
-    expect(profileValue.born_experience).toEqual(BODY.born_experience);
-    expect(profileValue.update_at).toBeDefined(); // Check that update_at is defined
-    expect(profileValue.type).toBe(BODY.type);
+    expect(profileValue.avatar).toBe(BODY.avatar);
+    expect(profileValue.description).toBe(BODY.description);
+    expect(profileValue.created_at).toEqual(BODY.created_at);
+    expect(profileValue.updated_at).toBe(BODY.updated_at); // Check that update_at is defined
+    expect(profileValue.role_id).toBe(BODY.role_id);
     expect(profileValue.user_id).toBe(BODY.user_id);
   });
   it("should update name and update update_at timestamp", () => {
     const profileValue = new ProfileValue(BODY);
     const newName = "Jane";
 
-    profileValue.setName(newName);
+    profileValue.setFirstName(newName);
 
-    expect(profileValue.name).toBe(newName);
-    expect(profileValue.update_at.getTime()).toBeGreaterThan(
-      profileValue.born_experience.getTime()
+    expect(profileValue.first_name).toBe(newName);
+    expect(profileValue.updated_at.getTime()).toBeGreaterThan(
+      profileValue.created_at.getTime()
     );
   });
 
@@ -43,11 +44,11 @@ describe("ProfileValue", () => {
     const profileValue = new ProfileValue(BODY);
     const newPictureUrl = "http://example.com/new_avatar.png";
 
-    profileValue.setPictureUrl(newPictureUrl);
+    profileValue.setAvatar(newPictureUrl);
 
-    expect(profileValue.picture_url).toBe(newPictureUrl);
-    expect(profileValue.update_at.getTime()).toBeGreaterThan(
-      profileValue.born_experience.getTime()
+    expect(profileValue.avatar).toBe(newPictureUrl);
+    expect(profileValue.updated_at.getTime()).toBeGreaterThan(
+      profileValue.created_at.getTime()
     );
   });
 
@@ -58,8 +59,8 @@ describe("ProfileValue", () => {
     profileValue.setLastName(newLastName);
 
     expect(profileValue.last_name).toBe(newLastName);
-    expect(profileValue.update_at.getTime()).toBeGreaterThan(
-      profileValue.born_experience.getTime()
+    expect(profileValue.updated_at.getTime()).toBeGreaterThan(
+      profileValue.created_at.getTime()
     );
   });
 
@@ -67,23 +68,11 @@ describe("ProfileValue", () => {
     const profileValue = new ProfileValue(BODY);
     const newSpecialist = "TRADER";
 
-    profileValue.setSpecialist(newSpecialist);
+    profileValue.setDescription(newSpecialist);
 
-    expect(profileValue.specialist).toBe(newSpecialist);
-    expect(profileValue.update_at.getTime()).toBeGreaterThan(
-      profileValue.born_experience.getTime()
-    );
-  });
-
-  it("should update born_experience and update update_at timestamp", () => {
-    const profileValue = new ProfileValue(BODY);
-    const newBornExperience = new Date("2024-02-08T03:08:50.027Z");
-
-    profileValue.setBornExprience(newBornExperience);
-
-    expect(profileValue.born_experience).toBe(newBornExperience);
-    expect(profileValue.update_at.getTime()).toBeGreaterThan(
-      profileValue.born_experience.getTime()
+    expect(profileValue.description).toBe(newSpecialist);
+    expect(profileValue.updated_at.getTime()).toBeGreaterThan(
+      profileValue.created_at.getTime()
     );
   });
 });

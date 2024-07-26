@@ -6,13 +6,13 @@ import { ProfileValue } from "../../../../../src/profile/domain/profile.value";
 // Definir mockProfileDocument antes de usarlo
 const mockProfileDocument: Partial<ProfileDocument> = {
   id: new Types.ObjectId("6690a84c88065550cbb460f4"),
-  name: "John",
+  first_name: "John",
   last_name: "Doe",
-  picture_url: "http://example.com/avatar.png",
-  specialist: "Developer",
-  born_experience: new Date("1990-01-01"),
-  type: "staff",
-  update_at: new Date("1990-01-01"),
+  avatar: "http://example.com/avatar.png",
+  description: "Developer",
+  created_at: new Date("1990-01-01"),
+  role_id: "staff",
+  updated_at: new Date("1990-01-01"),
   user_id: "userId",
 };
 
@@ -39,12 +39,13 @@ const toDomain = (profileMongo: ProfileDocument): ProfileEntity => {
   return new ProfileValue({
     // Cambia a ProfileEntity aquí si es necesario
     id: profileMongo.id.toString(),
-    name: profileMongo.name,
-    born_experience: profileMongo.born_experience,
+    first_name: profileMongo.first_name,
+    created_at: profileMongo.created_at,
+    updated_at: profileMongo.updated_at,
     last_name: profileMongo.last_name,
-    specialist: profileMongo.specialist,
-    picture_url: profileMongo.picture_url,
-    type: profileMongo.type,
+    description: profileMongo.description,
+    avatar: profileMongo.avatar,
+    role_id: profileMongo.role_id,
     user_id: profileMongo.user_id,
   });
 };
@@ -54,12 +55,13 @@ describe("MongoRepository", () => {
 
   const ProfileDto: CreateProfileDTO = {
     id: "1",
-    name: "John",
+    first_name: "John",
     last_name: "Doe",
-    picture_url: "http://example.com/avatar.png",
-    specialist: "Developer",
-    born_experience: new Date("1990-01-01"),
-    type: "staff",
+    avatar: "http://example.com/avatar.png",
+    description: "Developer",
+    created_at: new Date("1990-01-01"),
+    updated_at: new Date("1990-01-01"),
+    role_id: "staff",
     user_id: "userIOds",
   };
 
@@ -89,7 +91,7 @@ describe("MongoRepository", () => {
 
       expect(ProfileModel.create).toHaveBeenCalledWith(mockProfileValue);
       const toDomainProfile = toDomain(mockProfileDocument as ProfileDocument);
-      toDomainProfile.update_at = result.update_at;
+      toDomainProfile.updated_at = result.updated_at;
       expect(result).toEqual(expect.objectContaining(toDomainProfile));
     });
 
@@ -114,7 +116,7 @@ describe("MongoRepository", () => {
         "6690a84c88065550cbb460f4"
       );
       const toDomainProfile = toDomain(mockProfileDocument as ProfileDocument);
-      if (result) toDomainProfile.update_at = result?.update_at && new Date();
+      if (result) toDomainProfile.updated_at = result?.updated_at;
       expect(result).toEqual(expect.objectContaining(toDomainProfile));
     });
 

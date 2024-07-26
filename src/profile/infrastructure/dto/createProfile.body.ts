@@ -13,7 +13,7 @@ export class CreateProfileBody {
 
   @IsString()
   @IsNotEmpty()
-  name: string;
+  first_name: string;
 
   @IsString()
   @IsNotEmpty()
@@ -21,18 +21,22 @@ export class CreateProfileBody {
 
   @IsString()
   @IsNotEmpty()
-  specialist: string;
+  description: string;
 
   @IsDateString()
   @IsNotEmpty()
-  born_experience: Date;
+  created_at: Date;
+
+  @IsDateString()
+  @IsNotEmpty()
+  updated_at: Date;
 
   @IsString()
   @IsOptional()
-  picture_url: string;
+  avatar: string;
 
   @IsString()
-  type: string;
+  role_id: string;
   @IsString()
   user_id: string;
 }

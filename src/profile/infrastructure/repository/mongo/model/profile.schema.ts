@@ -20,13 +20,13 @@ const ProfileSchema = new Schema(
 );
 export interface ProfileDocument extends Document {
   id: Types.ObjectId;
-  name: string;
+  first_name: string;
   last_name: string;
-  specialist: string;
-  picture_url: string;
-  born_experience: Date;
-  type: string;
-  update_at: Date;
+  description: string;
+  avatar: string;
+  created_at: Date;
+  role_id: string;
+  updated_at: Date;
   user_id: string;
 }
 

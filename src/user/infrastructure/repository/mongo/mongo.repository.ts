@@ -6,7 +6,7 @@ import UserModel, { UserDocument } from "./model/user.schema";
 
 @injectable()
 export class UserMongoRepository implements IUserRepository {
-  async create(user: UserValue): Promise<UserEntity> {
+  async create(user: UserEntity): Promise<UserEntity> {
     try {
       const userCreate = await UserModel.create(user);
       return this.toDomain(userCreate);

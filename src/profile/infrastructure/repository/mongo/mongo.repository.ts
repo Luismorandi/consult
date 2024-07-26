@@ -28,13 +28,14 @@ export class ProfileMongoRepository implements IProfileRepository {
   private toDomain(profileMongo: ProfileDocument): ProfileEntity {
     return new ProfileValue({
       id: profileMongo.id.toString(),
-      name: profileMongo.name,
-      born_experience: profileMongo.born_experience,
+      first_name: profileMongo.first_name,
       last_name: profileMongo.last_name,
-      specialist: profileMongo.specialist,
-      picture_url: profileMongo.picture_url,
-      type: profileMongo.type,
+      description: profileMongo.description,
+      avatar: profileMongo.avatar,
+      role_id: profileMongo.role_id,
       user_id: profileMongo.user_id,
+      created_at: profileMongo.created_at,
+      updated_at: profileMongo.updated_at,
     });
   }
 }

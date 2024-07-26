@@ -13,27 +13,33 @@ export class CreateProfileDTO {
 
   @IsString()
   @IsNotEmpty()
-  name: string;
+  first_name: string;
 
   @IsString()
   @IsNotEmpty()
   last_name: string;
 
   @IsString()
-  @IsNotEmpty()
-  specialist: string;
-
-  @IsDate()
-  @IsNotEmpty()
-  born_experience: Date;
+  @IsOptional()
+  avatar: string;
 
   @IsString()
   @IsOptional()
-  picture_url: string;
+  description: string;
 
   @IsString()
-  type: string;
+  @IsNotEmpty()
+  role_id: string;
 
   @IsString()
+  @IsNotEmpty()
   user_id: string;
+
+  @IsString()
+  @IsNotEmpty()
+  created_at: Date;
+
+  @IsString()
+  @IsNotEmpty()
+  updated_at: Date;
 }

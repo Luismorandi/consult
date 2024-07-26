@@ -1,11 +1,11 @@
 export interface ProfileEntity {
-  name: string;
+  first_name: string;
   last_name: string;
-  picture_url: string;
-  specialist: string;
-  born_experience: Date;
-  id: string;
-  update_at: Date;
-  type: string;
+  avatar: string;
+  description: string;
   user_id: string;
+  id: string;
+  updated_at: Date;
+  role_id: string;
+  created_at: Date;
 }
