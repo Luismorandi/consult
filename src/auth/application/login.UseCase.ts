@@ -3,12 +3,7 @@ import { inject, injectable } from "inversify";
 import { REPOSITORIES } from "../../config/constants/repository.constants";
 import { IUserRepository } from "../../user/domain/user.repository";
 import { IRoleRepository } from "../../role/domain/role.repository";
-import { UserValue } from "../../user/domain/user.value";
-import { UUID } from "mongodb";
 import { IProfileRepository } from "../../profile/domain/profile.repository";
-import { CreateRegisterBody } from "../infrastructure/dto/createRegister.body";
-import { ProfileEntity } from "../../profile/domain/profile.entity";
-import { ProfileValue } from "../../profile/domain/profile.value";
 import { Helper } from "../../helpers/helpers";
 import { CreateLoginBody } from "../infrastructure/dto/createLogin.body";
 import { ILogin } from "../dto/createLogin.response";
@@ -20,9 +15,7 @@ export class LoginUserCase {
     @inject(REPOSITORIES.PROFILE)
     private readonly profileRepository: IProfileRepository,
     @inject(REPOSITORIES.USER)
-    private readonly userRepository: IUserRepository,
-    @inject(REPOSITORIES.ROLE)
-    private readonly roleRepository: IRoleRepository
+    private readonly userRepository: IUserRepository
   ) {}
 
   public async execute(input: CreateLoginBody): Promise<ILogin | null> {
