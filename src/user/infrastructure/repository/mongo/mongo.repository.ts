@@ -3,6 +3,7 @@ import { UserEntity } from "../../../domain/user.entity";
 import { UserValue } from "../../../domain/user.value";
 import { IUserRepository } from "../../../domain/user.repository";
 import UserModel, { UserDocument } from "./model/user.schema";
+import { ObjectId } from "mongodb";
 
 @injectable()
 export class UserMongoRepository implements IUserRepository {
@@ -17,7 +18,17 @@ export class UserMongoRepository implements IUserRepository {
 
   async getById(id: string): Promise<UserEntity | null> {
     try {
-      const user = await UserModel.findById(id);
+      const user = await UserModel.findById({ _id: new ObjectId(id) });
+      if (!user) return null;
+      return this.toDomain(user);
+    } catch (err) {
+      throw new Error(`Not found profile`);
+    }
+  }
+
+  async getByEmail(email: string): Promise<UserEntity | null> {
+    try {
+      const user = await UserModel.findOne({ email: email });
       if (!user) return null;
       return this.toDomain(user);
     } catch (err) {

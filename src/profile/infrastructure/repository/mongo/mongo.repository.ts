@@ -25,8 +25,18 @@ export class ProfileMongoRepository implements IProfileRepository {
     }
   }
 
+  async getByUser(user_id: string): Promise<ProfileEntity | null> {
+    try {
+      const profile = await ProfileModel.findOne({ user_id: user_id });
+      if (!profile) return null;
+      return this.toDomain(profile);
+    } catch (err) {
+      throw new Error(`Not found profile`);
+    }
+  }
+
   private toDomain(profileMongo: ProfileDocument): ProfileEntity {
-    return new ProfileValue({
+    const profile = new ProfileValue({
       id: profileMongo.id.toString(),
       first_name: profileMongo.first_name,
       last_name: profileMongo.last_name,
@@ -37,5 +47,6 @@ export class ProfileMongoRepository implements IProfileRepository {
       created_at: profileMongo.created_at,
       updated_at: profileMongo.updated_at,
     });
+    return profile;
   }
 }

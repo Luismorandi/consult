@@ -5,15 +5,15 @@ import { IRoleRepository } from "../domain/role.repository";
 import { RoleEntity } from "../domain/role.entity";
 
 @injectable()
-export class GetByIdRoleUseCase {
+export class GetByNameRoleUseCase {
   constructor(
     @inject(REPOSITORIES.ROLE)
     private readonly roleRepository: IRoleRepository
   ) {}
 
-  public async execute(id: string): Promise<RoleEntity | null> {
+  public async execute(name: string): Promise<RoleEntity | null> {
     try {
-      const role = await this.roleRepository.getById(id);
+      const role = await this.roleRepository.getByName(name);
       return role;
     } catch (err) {
       throw err;

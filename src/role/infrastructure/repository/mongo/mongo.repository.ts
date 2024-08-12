@@ -17,9 +17,9 @@ export class RoleMongoRepository implements IRoleRepository {
     }
   }
 
-  async getById(id: string): Promise<RoleEntity | null> {
+  async getByName(name: string): Promise<RoleEntity | null> {
     try {
-      const role = await RoleModel.findById(id);
+      const role = await RoleModel.findOne({ type: name });
       if (!role) return null;
       return this.toDomain(role);
     } catch (err) {

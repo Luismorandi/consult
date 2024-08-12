@@ -4,7 +4,7 @@ import { REPOSITORIES } from "../../config/constants/repository.constants";
 import { UserEntity } from "../domain/user.entity";
 
 @injectable()
-export class GetByIdUserCase {
+export class GetByIdUserUserCase {
   constructor(
     @inject(REPOSITORIES.USER)
     private readonly userRepository: IUserRepository

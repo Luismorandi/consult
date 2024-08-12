@@ -5,11 +5,12 @@ import cors from "cors";
 import dbInit from "./config/db/mongo";
 import userRoute from "./user/infrastructure/route/user.route";
 import roleRoute from "./role/infrastructure/route/role.route";
+import authRoute from "./auth/infrastructure/route/auth.route";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(profileRoute, userRoute, roleRoute);
+app.use(profileRoute, userRoute, roleRoute, authRoute);
 
 dbInit().then();
 
