@@ -21,3 +21,9 @@ export class CreateRoleDTO {
   @IsNotEmpty()
   updated_at: Date;
 }
+
+export enum roles {
+  COACHEE = "COACHEE",
+  COACH = "COACH",
+  ADMIN = "ADMIN",
+}

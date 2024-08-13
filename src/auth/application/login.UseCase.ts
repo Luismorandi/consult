@@ -4,13 +4,13 @@ import { REPOSITORIES } from "../../config/constants/repository.constants";
 import { IUserRepository } from "../../user/domain/user.repository";
 import { IRoleRepository } from "../../role/domain/role.repository";
 import { IProfileRepository } from "../../profile/domain/profile.repository";
-import { Helper } from "../../helpers/helpers";
+import { Utils } from "../../helpers/utils/utils";
 import { CreateLoginBody } from "../infrastructure/dto/createLogin.body";
 import { ILogin } from "../dto/createLogin.response";
 
 @injectable()
 export class LoginUserCase {
-  private helper = new Helper();
+  private utils = new Utils();
   constructor(
     @inject(REPOSITORIES.PROFILE)
     private readonly profileRepository: IProfileRepository,
@@ -22,7 +22,7 @@ export class LoginUserCase {
     try {
       const user = await this.userRepository.getByEmail(input.email);
       if (!user) throw new Error("user not found");
-      const checkPassword = this.helper.hash.compare(
+      const checkPassword = this.utils.hash.compare(
         input.password,
         user.password
       );
@@ -35,7 +35,7 @@ export class LoginUserCase {
 
       return {
         profile,
-        token: this.helper.tokenizer.generate(profile),
+        token: this.utils.tokenizer.generate(profile),
       };
     } catch (err) {
       throw err;

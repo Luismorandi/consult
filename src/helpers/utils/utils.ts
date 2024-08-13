@@ -1,7 +1,7 @@
 import { Hash } from "./hash";
 import { Tokenizer } from "./tokenizer";
 
-export class Helper {
+export class Utils {
   public hash;
   public tokenizer;
   constructor() {

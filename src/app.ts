@@ -6,10 +6,13 @@ import dbInit from "./config/db/mongo";
 import userRoute from "./user/infrastructure/route/user.route";
 import roleRoute from "./role/infrastructure/route/role.route";
 import authRoute from "./auth/infrastructure/route/auth.route";
+import { Auth } from "./helpers/middlewares/auth";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+// const auth = new Auth().checkAuth;
+// app.use(auth);
 app.use(profileRoute, userRoute, roleRoute, authRoute);
 
 dbInit().then();

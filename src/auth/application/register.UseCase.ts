@@ -9,11 +9,11 @@ import { IProfileRepository } from "../../profile/domain/profile.repository";
 import { CreateRegisterBody } from "../infrastructure/dto/createRegister.body";
 import { ProfileEntity } from "../../profile/domain/profile.entity";
 import { ProfileValue } from "../../profile/domain/profile.value";
-import { Helper } from "../../helpers/helpers";
+import { Utils } from "../../helpers/utils/utils";
 
 @injectable()
 export class RegisterUserCase {
-  private helper = new Helper();
+  private utils = new Utils();
   constructor(
     @inject(REPOSITORIES.PROFILE)
     private readonly profileRepository: IProfileRepository,
@@ -29,7 +29,7 @@ export class RegisterUserCase {
     try {
       const user = new UserValue({
         email: input.email,
-        password: this.helper.hash.encrypt(input.password),
+        password: this.utils.hash.encrypt(input.password),
         created_at: input.created_at,
         updated_at: input.updated_at,
         id: "null",
